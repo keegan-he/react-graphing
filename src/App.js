@@ -3,6 +3,16 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+
+state = {
+  counter: 0,
+  dogs: 2,
+  people: 5,
+};
+
+
+
   render() {
     return (
       <div className="App">

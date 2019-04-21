@@ -17,9 +17,40 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React
+            Learn React - Hi Keegan
           </a>
+          
         </header>
+
+
+    <div class="Container">
+        <div class="Nav">coin price</div>
+        <div class="Box">
+            <div id="GraphBox">
+            </div>
+        </div>
+        <div class="Footer">
+        </div>
+        <div class="Coins">
+            <div>BTC</div>
+            <div>ETH</div>
+            <div>LTC</div>
+            <div>XLM</div>
+            <div>VET</div>
+        </div>
+        <div id="PriceBox">
+        </div>
+        <div class="BottomFoot">
+        </div>
+        <div class="Button">
+            <button onClick="doFetch()">Update Coin Data</button>
+        </div>
+        <section id="output">
+        </section>
+    </div>
+
+    <script src="main.js"></script>
+
       </div>
     );
   }

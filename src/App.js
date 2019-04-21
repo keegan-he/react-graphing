@@ -26,7 +26,7 @@ class App extends Component {
         <div className="BottomFoot">
         </div>
         <div className="Button">
-            <button onClick="doFetch()">Update Coin Data</button>
+            <button onClick={() => this.doFetch()}> Update Coin Data </button>
         </div>
         <section id="output">
         </section>

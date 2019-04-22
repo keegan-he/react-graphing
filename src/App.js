@@ -12,8 +12,20 @@ state = {
 };
 
 
+componentDidMount() {
+  fetch("https://api.coinlore.com/api/tickers/")
+    .then(response => response.formData())
+    .then(data => {
+      console.log("got data", data);
+      this.setState({
+        apiData:data,
+      });
+    });
+}
+
 
   render() {
+    console.log("render function is running")
     return (
       <div className="App">
     <div className="Container">

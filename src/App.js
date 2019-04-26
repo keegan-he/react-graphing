@@ -7,7 +7,7 @@ class App extends Component {
 
 state = {
   counter: 0,
-  dogs: 2,
+  dogs: 0,
   people: 5,
 };
 
@@ -31,12 +31,21 @@ incrementCounter = () => {
   });
 }
 
+incrementDogCounter = () => {
+  console.log('dog counter running');
+  let currentDogCount = this.state.dogs;
+  this.setState({
+    dogs: currentDogCount + 1,
+  });
+}
+
   render() {
     console.log("render function is running")
     return (
       <div className="App">
     <div className="Container">
         <p>value of counter: {this.state.counter}</p>
+        <p>increase the amount of dogs: {this.state.dogs}</p>
         <div className="Nav">coin price</div>
         <div className="Box">
             <div id="GraphBox">
@@ -60,7 +69,7 @@ incrementCounter = () => {
 
             <button onClick={this.incrementCounter} >Click me to increment counter</button>
 
-            
+            <button onClick={this.incrementDogCounter} >Click this to increment dog count</button>
         </div>
         <section id="output">
         </section>

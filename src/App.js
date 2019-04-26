@@ -23,12 +23,20 @@ componentDidMount() {
     });
 }
 
+incrementCounter = () => {
+  console.log('counter function running');
+  let currentCount = this.state.counter;
+  this.setState({
+    counter: currentCount +1,
+  });
+}
 
   render() {
     console.log("render function is running")
     return (
       <div className="App">
     <div className="Container">
+        <p>value of counter: {this.state.counter}</p>
         <div className="Nav">coin price</div>
         <div className="Box">
             <div id="GraphBox">
@@ -49,6 +57,10 @@ componentDidMount() {
         </div>
         <div className="Button">
             <button onClick={() => this.doFetch()}> Update Coin Data </button>
+
+            <button onClick={this.incrementCounter} >Click me to increment counter</button>
+
+            
         </div>
         <section id="output">
         </section>

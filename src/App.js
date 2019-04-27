@@ -6,8 +6,12 @@ class App extends Component {
 
 state = {
   counter: 0,
-  dogs: 0,
-  people: 5,
+  btc: 5000,
+  eth: 175,
+  ltc: 110,
+  xlm: 1,
+  vet: 1
+
 };
 
 

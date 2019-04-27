@@ -5,12 +5,11 @@ class App extends Component {
 
 
 state = {
-  counter: 0,
-  btc: 5000,
-  eth: 175,
-  ltc: 110,
-  xlm: 1,
-  vet: 1
+  btc: 5131.00,
+  eth: 156.57,
+  ltc: 72.70,
+  xlm: 0.97,
+  vet: 0.75
 
 };
 

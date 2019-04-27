@@ -25,22 +25,6 @@ componentDidMount() {
     });
 }
 
-incrementCounter = () => {
-  console.log('counter function running');
-  let currentCount = this.state.counter;
-  this.setState({
-    counter: currentCount +1,
-  });
-}
-
-incrementDogCounter = () => {
-  console.log('dog counter running');
-  let currentDogCount = this.state.dogs;
-  this.setState({
-    dogs: currentDogCount + 1,
-  });
-}
-
   render() {
     console.log("render function is running")
     return (

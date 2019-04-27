@@ -69,11 +69,11 @@ doFetch = () => {
         <div className="Footer">
         </div>
         <div className="Coins">
-            <div>BTC price is: {this.state.btc}</div>
-            <div>ETH price is: {this.state.eth}</div>
-            <div>LTC price is: {this.state.ltc}</div>
-            <div>BCH price is: {this.state.bch}</div>
-            <div>BNB price is: {this.state.bnb}</div>
+            <div>BTC price: {this.state.btc}</div>
+            <div>ETH price: {this.state.eth}</div>
+            <div>LTC price: {this.state.ltc}</div>
+            <div>BCH price: {this.state.bch}</div>
+            <div>BNB price: {this.state.bnb}</div>
         </div>
         <div id="PriceBox">
         </div>

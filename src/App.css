@@ -39,7 +39,7 @@
 .Coins {
   background-color: rgb(73, 143, 246);
   display: grid;
-  padding-left: 10%;
+  padding-left: 1%;
   align-self: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   /* grid-template-rows: 20px; */

@@ -59,10 +59,14 @@ class App extends Component {
           <div className="Nav">coinprice</div>
           <div className="Box">
             <div className="GraphBox">
+{
 
-              <div className="BarChart">
-
-              </div>
+  this.state.coins.map(coin => (
+    <div class="BarChart-bar" style={{height: coin.percentage + "%"}}>
+    {coin.label}
+    </div>
+  ))
+}
             </div>
           </div>
           <div className="Footer">

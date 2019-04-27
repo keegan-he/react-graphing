@@ -41,9 +41,7 @@ class App extends Component {
           ltc: data.data[4].price_usd,
           bnb: data.data[6].price_usd,
         });
-
       });
-
   }
 
   render() {

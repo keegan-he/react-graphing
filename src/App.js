@@ -51,7 +51,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="Container">
-          <div className="Nav">coin price</div>
+          <div className="Nav">coinprice</div>
           <div className="Box">
 
             <div className="GraphBox">

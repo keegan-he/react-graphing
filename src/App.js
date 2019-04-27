@@ -13,7 +13,21 @@ state = {
 };
 
 
+componentDidMount() {
+  fetch("https://api.coinlore.com/api/tickers/")
+  .then(response => response.json())
+  .then(data => {
+    console.log('fetched coin data', data);
+    this.setState({
+      btc: data.data[0].price_usd,
+      bch: data.data[3].price_usd,
+      eth: data.data[1].price_usd,
+      ltc: data.data[4].price_usd,
+      bnb: data.data[6].price_usd,
+    });
 
+  });
+}
 
 doFetch = () => {
   console.log('onRefresh method running')

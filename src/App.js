@@ -5,12 +5,11 @@ class App extends Component {
 
 
 state = {
-  btc: 5131.00,
-  eth: 156.57,
-  ltc: 72.70,
-  xlm: 0.97,
-  vet: 0.75
-
+  btc: '',
+  bch: '',
+  eth: '',
+  ltc: '',
+  bnb: '',
 };
 
 
@@ -44,7 +43,11 @@ doFetch = () => {
 
     // });
     this.setState({
-      btc: data.data[0],
+      btc: data.data[0].price_usd,
+      bch: data.data[3].price_usd,
+      eth: data.data[1].price_usd,
+      ltc: data.data[4].price_usd,
+      bnb: data.data[6].price_usd,
     });
 
   });
@@ -66,11 +69,11 @@ doFetch = () => {
         <div className="Footer">
         </div>
         <div className="Coins">
-            <div>BTC</div>
-            <div>ETH</div>
-            <div>LTC</div>
-            <div>XLM</div>
-            <div>VET</div>
+            <div>BTC price is: {this.state.btc}</div>
+            <div>ETH price is: {this.state.eth}</div>
+            <div>LTC price is: {this.state.ltc}</div>
+            <div>BCH price is: {this.state.bch}</div>
+            <div>BNB price is: {this.state.bnb}</div>
         </div>
         <div id="PriceBox">
         </div>

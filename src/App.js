@@ -13,13 +13,7 @@ state = {
 };
 
 
-// componentDidMount() {
-//   fetch("https://api.coinlore.com/api/tickers/")
-//     .then(response => response.formData())
-//     .then(data => {
-//       console.log("got data", data);
-//     });
-// }
+
 
 doFetch = () => {
   console.log('onRefresh method running')

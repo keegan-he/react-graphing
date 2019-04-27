@@ -59,8 +59,6 @@ doFetch = () => {
     return (
       <div className="App">
     <div className="Container">
-        <p>value of counter: {this.state.counter}</p>
-        <p>increase the amount of dogs: {this.state.dogs}</p>
         <div className="Nav">coin price</div>
         <div className="Box">
             <div id="GraphBox">

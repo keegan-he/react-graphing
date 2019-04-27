@@ -53,11 +53,9 @@ class App extends Component {
         <div className="Container">
           <div className="Nav">coinprice</div>
           <div className="Box">
-
             <div className="GraphBox">
 
             </div>
-
           </div>
           <div className="Footer">
           </div>

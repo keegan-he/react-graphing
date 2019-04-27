@@ -10,6 +10,13 @@ class App extends Component {
     eth: '',
     ltc: '',
     bnb: '',
+    coins: [
+      'btc',
+      'bch',
+      'eth',
+      'ltc',
+      'bnb',
+    ],
   };
 
 
@@ -53,6 +60,9 @@ class App extends Component {
           <div className="Box">
             <div className="GraphBox">
 
+              <div className="BarChart">
+
+              </div>
             </div>
           </div>
           <div className="Footer">

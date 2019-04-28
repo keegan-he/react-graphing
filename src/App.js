@@ -69,7 +69,14 @@ class App extends Component {
                     
                   </div>
                 ))
-              } */}
+              } */
+              }
+
+              {
+                <div className="BarChart-bar" style={{height: 400 + "%"}}>  btc </div>
+              }
+
+              
 
 
             </div>

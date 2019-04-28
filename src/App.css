@@ -5,6 +5,10 @@
   --bgcolor-nav: #040d1f;
 }
 
+body{
+  background-color: rgb(23, 23, 29);
+}
+
 .Container {
   display: grid;
   padding: 10%;

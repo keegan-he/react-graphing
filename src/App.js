@@ -73,8 +73,10 @@ class App extends Component {
               }
 
               {
-                <div className="BarChart-bar" style={{height: 400 + "%"}}>  btc </div>
+                <div className="BarChart-bar" style={{height: this.state.coins.price_usd + "%"}}>  btc </div>
               }
+
+
 
               
 

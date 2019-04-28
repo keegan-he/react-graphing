@@ -19,12 +19,15 @@ class App extends Component {
     ],
   };
 
-
   componentDidMount() {
     fetch("https://api.coinlore.com/api/tickers/")
       .then(response => response.json())
       .then(data => {
-        console.log('fetched coin data', data);
+        //console.log('componentdidMount function ran', data);
+        //console.log(data.data[0]) // prints api info of coin
+        const btc = data.data[0];
+        console.log('here is btc info: ', btc)
+
         this.setState({
           btc: data.data[0].price_usd,
           bch: data.data[3].price_usd,
@@ -36,7 +39,7 @@ class App extends Component {
   }
 
   doFetch = () => {
-    console.log('onRefresh method running')
+    console.log('onRefresh function running')
     fetch("https://api.coinlore.com/api/tickers/")
       .then(response => response.json())
       .then(data => {
@@ -59,15 +62,15 @@ class App extends Component {
           <div className="Nav">coinprice</div>
           <div className="Box">
             <div className="GraphBox">
-              {
-
+              {/* {
                 this.state.coins.map(coin => (
                   <div className="BarChart-bar" style={{ height: coin.price_usd + "%" }}>
                     {coin.btc}
                     
                   </div>
                 ))
-              }
+              } */}
+
 
             </div>
           </div>

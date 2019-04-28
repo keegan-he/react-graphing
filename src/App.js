@@ -23,10 +23,10 @@ class App extends Component {
     fetch("https://api.coinlore.com/api/tickers/")
       .then(response => response.json())
       .then(data => {
-        //console.log('componentdidMount function ran', data);
+        console.log('componentdidMount function ran', data);
         //console.log(data.data[0]) // prints api info of coin
-        const btc = data.data[0];
-        console.log('here is btc info: ', btc)
+        //const btc = data.data[0];
+        //console.log('here is btc info: ', btc)
 
         this.setState({
           btc: data.data[0].price_usd,

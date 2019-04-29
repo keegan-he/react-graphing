@@ -19,17 +19,19 @@ class App extends Component {
     ],
   };
 
+
   componentDidMount() {
     fetch("https://api.coinlore.com/api/tickers/")
       .then(response => response.json())
       .then(data => {
         console.log('componentdidMount function ran', data);
         //console.log(data.data[0]) // prints api info of coin
-        const btc = data.data[0];
-        const bch = data.data[3];
-        console.log('here is btc & bch info: ', btc, bch)
+        // const btc = data.data[0];
+        // const bch = data.data[3];
+        // console.log('here is btc & bch info: ', btc, bch)
 
         this.setState({
+
           btc: data.data[0].price_usd,
           bch: data.data[3].price_usd,
           eth: data.data[1].price_usd,
@@ -73,14 +75,13 @@ class App extends Component {
               } */
               }
 
-              {
+              {/* {
                 <div className="BarChart-bar" style={{height: this.state.coins.price_usd + "%"}}>  btc </div>
-              }
+              } */}
 
-
-
-
-              
+              <div className="BarChart-bar" style={{height: this.state.ltc + "%"}}>
+                {this.state.btc}
+              </div>
 
 
             </div>

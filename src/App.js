@@ -60,7 +60,7 @@ class App extends Component {
               {
                 this.state.coins.map(coin => (
                   <div className="BarChart-bar" style={{ height: this.state[coin] + "%" }}>
-                    {this.state[coin]}
+                    ${this.state[coin]}
 
                   </div>
                 ))
@@ -70,11 +70,11 @@ class App extends Component {
           <div className="Footer">
           </div>
           <div className="Coins">
-            <div>BTC price: {this.state.btc}</div>
-            <div>BCH price: {this.state.bch}</div>
-            <div>ETH price: {this.state.eth}</div>
-            <div>LTC price: {this.state.ltc}</div>
-            <div>BNB price: {this.state.bnb}</div>
+            <div>BTC price: ${this.state.btc}</div>
+            <div>BCH price: ${this.state.bch}</div>
+            <div>ETH price: ${this.state.eth}</div>
+            <div>LTC price: ${this.state.ltc}</div>
+            <div>BNB price: ${this.state.bnb}</div>
           </div>
           <div id="PriceBox">
           </div>

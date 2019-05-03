@@ -32,6 +32,8 @@ body{
   justify-content: center;
   background-image: url("https://media.giphy.com/media/iHHv1bKHEvtXq/giphy.gif");
   background-size: cover; /* stretch image without repeating */
+  
+  
 
 }
 
@@ -49,6 +51,7 @@ body{
   /* grid-template-rows: 20px; */
   /* grid-row-gap: 10vh;
   grid-column-gap: 30px; */
+  
 
 }
 
@@ -56,6 +59,7 @@ body{
   background-color: var(--b_footerbg);
   height: 1vh;
   align-self: center;
+  
   
 }
 
@@ -67,7 +71,7 @@ body{
 
 .GraphBox {
   display: grid;
-  padding-top: 400px;
+  padding-top: 300px;
   padding-left: 5%;
   padding-right: 5%;
   align-self: end;
@@ -93,6 +97,7 @@ body{
   color: rgb(57, 57, 57);
   text-shadow: 2px 2px 4px #00000012;
   box-shadow: 5px 5px rgba(128, 128, 128, 0.399);
+  max-height: 350px;
 }
 
 .BarChart-bar:hover {

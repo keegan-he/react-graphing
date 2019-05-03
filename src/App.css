@@ -97,7 +97,7 @@ body{
   color: rgb(57, 57, 57);
   text-shadow: 2px 2px 4px #00000012;
   box-shadow: 5px 5px rgba(128, 128, 128, 0.399);
-  max-height: 350px;
+  max-height: 350px; /* max height of BTC hack */
 }
 
 .BarChart-bar:hover {

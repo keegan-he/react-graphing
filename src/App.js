@@ -5,8 +5,20 @@ class App extends Component {
 
 
   state = {
-
+    btc: '',
+    bch: '',
+    eth: '',
+    ltc: '',
+    bnb: '',
+    coins: [
+      'btc',
+      'bch',
+      'eth',
+      'ltc',
+      'bnb',
+    ],
   };
+
 
   componentDidMount() {
     fetch("https://api.coinlore.com/api/tickers/")
@@ -19,31 +31,33 @@ class App extends Component {
         // console.log('here is btc & bch info: ', btc, bch)
 
         this.setState({
-          data: data,
+
+          btc: data.data[0].price_usd,
+          bch: data.data[3].price_usd,
+          eth: data.data[1].price_usd,
+          ltc: data.data[4].price_usd,
+          bnb: data.data[6].price_usd,
         });
       });
   }
 
-  // doFetch = () => {
-  //   console.log('onRefresh function running')
-  //   fetch("https://api.coinlore.com/api/tickers/")
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       console.log('fetched coin data', data);
-  //       this.setState({
-  //         btc: data.data[0].price_usd,
-  //         bch: data.data[3].price_usd,
-  //         eth: data.data[1].price_usd,
-  //         ltc: data.data[4].price_usd,
-  //         bnb: data.data[6].price_usd,
-  //       });
-  //     });
-  // }
+  doFetch = () => {
+    console.log('onRefresh function running')
+    fetch("https://api.coinlore.com/api/tickers/")
+      .then(response => response.json())
+      .then(data => {
+        console.log('fetched coin data', data);
+        this.setState({
+          btc: data.data[0].price_usd,
+          bch: data.data[3].price_usd,
+          eth: data.data[1].price_usd,
+          ltc: data.data[4].price_usd,
+          bnb: data.data[6].price_usd,
+        });
+      });
+  }
 
   render() {
-
-    const price = this.state.data
-    console.log(price)
     console.log("render function is running")
     return (
       <div className="App">
@@ -51,20 +65,23 @@ class App extends Component {
           <div className="Nav">coinprice</div>
           <div className="Box">
             <div className="GraphBox">
-{/* 
-{price.map(prices => 
-<h4 key={prices.symbol}>{prices.symbol}</h4>)} */}
-
-              {/* <div className="BarChart-bar" style={{height: this.state.ltc + "%"}}>
-              </div> */}
-{/* 
 {
-  this.state.data.map(datum => (
-    <div class="Bar-Chart-bar" style={{height: datum.price_usd + "%"}}>
-    {datum.name}
+  this.state.coins.map(coin => (
+    <div className="BarChart-bar" style={{ height: this.state[coin] + "%" }}>
+      {this.state[coin]}
+      
     </div>
   ))
-} */}
+ } 
+
+              {/* {
+                <div className="BarChart-bar" style={{height: this.state.coins.price_usd + "%"}}>  btc </div>
+              } */}
+
+              {/* <div className="BarChart-bar" style={{height: this.state.ltc + "%"}}>
+              ltc
+              </div> */}
+
 
             </div>
           </div>

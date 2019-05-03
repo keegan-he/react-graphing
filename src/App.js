@@ -3,7 +3,6 @@ import './App.css';
 
 class App extends Component {
 
-
   state = {
     btc: '',
     bch: '',
@@ -19,15 +18,12 @@ class App extends Component {
     ],
   };
 
-
   componentDidMount() {
     fetch("https://api.coinlore.com/api/tickers/")
       .then(response => response.json())
       .then(data => {
         console.log('componentdidMount function ran', data);
-
         this.setState({
-
           btc: data.data[0].price_usd,
           bch: data.data[3].price_usd,
           eth: data.data[1].price_usd,
@@ -69,8 +65,6 @@ class App extends Component {
                   </div>
                 ))
               }
-
-
             </div>
           </div>
           <div className="Footer">
@@ -92,9 +86,7 @@ class App extends Component {
           <section id="output">
           </section>
         </div>
-
         <script src="main.js"></script>
-
       </div>
     );
   }

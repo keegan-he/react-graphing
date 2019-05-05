@@ -1,6 +1,6 @@
 
 # Coinprice in React
-demo
+
 ![yay](react-graphing.gif)
 
 ## Deployed to Heroku: 
